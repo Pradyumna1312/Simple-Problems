@@ -1,4 +1,5 @@
-# Simple-Problems
+# Simple-Problems-with-Verification
+
 Hello, This repo is for Practicing few easy RTL design problems with solution.
 
 I'm using Lattice Semiconductor's Radiant Software for solving these Problems
