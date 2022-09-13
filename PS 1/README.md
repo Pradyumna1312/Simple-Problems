@@ -28,7 +28,21 @@ Using System Verilog a Test bench is implemented for all the components i.e. Mux
 ![image](https://user-images.githubusercontent.com/54210084/189541300-6ee7b39f-5334-4357-a07c-38bda0958cc2.png)
 Model Simulation result
 
-*Note*: There are some Assertion errors in Final Model Simulation and will be rectified.
+**_Note_**: There are some Assertion errors in Final Model Simulation and will be rectified.
 
 
+## FIXED!!
+The assertion errors in the previous test bench are removed.
+### Cause for the failure?
+Assertion in the previous testbench was suitablw only for combinational circuit and not for sequenctial circuit. The outputs which were coming were based on the same instant whereas the assertiion should have happened 1 clock pulse afterwards.
+Meaning all the results shown before were wrong.
 
+Then why Assertion didn't fail?
+
+Reason: Becoz the outputs of the previous instruction was 'conincidently' same as what was required at that time.
+### Fix
+    Using "##" Operator
+**_##_** is an operator used for asserting with time delays.
+
+![image](https://user-images.githubusercontent.com/54210084/189899005-c55c8ddb-aa1c-460b-a3e7-aedae8d6ad72.png)
+    
