@@ -1,0 +1,6 @@
+read_verilog Sort3ip.v Sort_2ip.v
+hierarchy -top Sort3ip
+techmap
+synth
+show -format dot -prefix ./Sort3RTL Sort3ip
+show -format dot -prefix ./Sort2RTL Sort_2ip
